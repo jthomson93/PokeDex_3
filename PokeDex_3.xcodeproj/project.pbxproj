@@ -13,6 +13,7 @@
 		7DA5CA7E1E564A1D002DAFD0 /* PokeDex_3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5CA7C1E564A1D002DAFD0 /* PokeDex_3.xcdatamodeld */; };
 		7DA5CA801E564A1D002DAFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5CA7F1E564A1D002DAFD0 /* Assets.xcassets */; };
 		7DA5CA831E564A1D002DAFD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5CA811E564A1D002DAFD0 /* LaunchScreen.storyboard */; };
+		7DA5CA8B1E564D64002DAFD0 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5CA8A1E564D64002DAFD0 /* pokemon.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7DA5CA7F1E564A1D002DAFD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DA5CA821E564A1D002DAFD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DA5CA841E564A1D002DAFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DA5CA8A1E564D64002DAFD0 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				7DA5CA791E564A1D002DAFD0 /* Main.storyboard */,
 				7DA5CA7F1E564A1D002DAFD0 /* Assets.xcassets */,
 				7DA5CA811E564A1D002DAFD0 /* LaunchScreen.storyboard */,
+				7DA5CA8A1E564D64002DAFD0 /* pokemon.csv */,
 				7DA5CA841E564A1D002DAFD0 /* Info.plist */,
 				7DA5CA7C1E564A1D002DAFD0 /* PokeDex_3.xcdatamodeld */,
 			);
@@ -129,6 +132,7 @@
 			files = (
 				7DA5CA831E564A1D002DAFD0 /* LaunchScreen.storyboard in Resources */,
 				7DA5CA801E564A1D002DAFD0 /* Assets.xcassets in Resources */,
+				7DA5CA8B1E564D64002DAFD0 /* pokemon.csv in Resources */,
 				7DA5CA7B1E564A1D002DAFD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

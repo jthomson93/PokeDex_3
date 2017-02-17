@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0765521E5706D30072C6D0 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0765511E5706D30072C6D0 /* Pokemon.swift */; };
+		7D0765551E570C6B0072C6D0 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0765541E570C6B0072C6D0 /* PokeCell.swift */; };
+		7D0765571E57418C0072C6D0 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0765561E57418C0072C6D0 /* csv.swift */; };
 		7DA5CA761E564A1D002DAFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5CA751E564A1D002DAFD0 /* AppDelegate.swift */; };
 		7DA5CA781E564A1D002DAFD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5CA771E564A1D002DAFD0 /* ViewController.swift */; };
 		7DA5CA7B1E564A1D002DAFD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5CA791E564A1D002DAFD0 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D0765511E5706D30072C6D0 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		7D0765541E570C6B0072C6D0 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		7D0765561E57418C0072C6D0 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		7DA5CA721E564A1D002DAFD0 /* PokeDex_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeDex_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA5CA751E564A1D002DAFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA5CA771E564A1D002DAFD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D0765501E5706C40072C6D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D0765511E5706D30072C6D0 /* Pokemon.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7D0765531E570C530072C6D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D0765541E570C6B0072C6D0 /* PokeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		7DA5CA691E564A1D002DAFD0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +80,11 @@
 		7DA5CA741E564A1D002DAFD0 /* PokeDex_3 */ = {
 			isa = PBXGroup;
 			children = (
+				7D0765531E570C530072C6D0 /* View */,
+				7D0765501E5706C40072C6D0 /* Model */,
 				7DA5CA751E564A1D002DAFD0 /* AppDelegate.swift */,
 				7DA5CA771E564A1D002DAFD0 /* ViewController.swift */,
+				7D0765561E57418C0072C6D0 /* csv.swift */,
 				7DA5CA791E564A1D002DAFD0 /* Main.storyboard */,
 				7DA5CA7F1E564A1D002DAFD0 /* Assets.xcassets */,
 				7DA5CA811E564A1D002DAFD0 /* LaunchScreen.storyboard */,
@@ -103,6 +128,7 @@
 					7DA5CA711E564A1D002DAFD0 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ZP5LV6GTM6;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -144,9 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0765571E57418C0072C6D0 /* csv.swift in Sources */,
 				7DA5CA7E1E564A1D002DAFD0 /* PokeDex_3.xcdatamodeld in Sources */,
+				7D0765521E5706D30072C6D0 /* Pokemon.swift in Sources */,
 				7DA5CA781E564A1D002DAFD0 /* ViewController.swift in Sources */,
 				7DA5CA761E564A1D002DAFD0 /* AppDelegate.swift in Sources */,
+				7D0765551E570C6B0072C6D0 /* PokeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +337,7 @@
 				7DA5CA891E564A1D002DAFD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

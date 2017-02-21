@@ -24,16 +24,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.delegate = self
         
         parsePokemonCSV()
+        initAudio()
         
     }
     
     func initAudio() {
         
-        let path = Bundle.main.path(forResource: "music", ofType: ".mp3")
+        let path = Bundle.main.path(forResource: "music", ofType: "mp3")
         
         do {
             
-            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path!)!)
+            musicPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path!))
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = -1
             musicPlayer.play()
@@ -109,12 +110,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if musicPlayer.isPlaying {
             musicPlayer.pause()
-            sender.alpha = 0.2
+            sender.alpha = 0.8
         } else {
             musicPlayer.play()
             sender.alpha = 1.0
+            
         }
     }
+    
     
 
 

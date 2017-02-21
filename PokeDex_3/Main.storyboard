@@ -50,7 +50,7 @@
                                         </constraints>
                                         <state key="normal" image="music.png"/>
                                         <connections>
-                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9z6-HW-CSu"/>
+                                            <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1mk-FM-rx1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -116,8 +116,8 @@
                                             <constraint firstItem="EoT-Vu-K5d" firstAttribute="top" secondItem="LrZ-wt-QSA" secondAttribute="top" id="XkO-p7-0KY"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="nameLbl" destination="aBa-Qf-u6g" id="U1C-QY-R3H"/>
-                                            <outlet property="thumbImg" destination="EoT-Vu-K5d" id="zDt-Hw-m2U"/>
+                                            <outlet property="nameLabel" destination="aBa-Qf-u6g" id="f1M-2p-ZCE"/>
+                                            <outlet property="thumbImg" destination="EoT-Vu-K5d" id="kay-2y-ikY"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -142,8 +142,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collection" destination="ROp-0H-xLa" id="VUr-EH-Ayr"/>
-                        <outlet property="searchBar" destination="Kg2-FC-9f0" id="hrl-Il-vKS"/>
+                        <outlet property="collection" destination="ROp-0H-xLa" id="iBo-mf-0t6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

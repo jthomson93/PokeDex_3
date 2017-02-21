@@ -143,6 +143,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="ROp-0H-xLa" id="iBo-mf-0t6"/>
+                        <outlet property="searchBar" destination="Kg2-FC-9f0" id="iVP-iy-Nlm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

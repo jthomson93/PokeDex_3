@@ -38,7 +38,7 @@ open class CSV {
     
     
     func parseHeaders(fromLines lines: [String]) -> [String] {
-        return lines[0].componentsSeparatedByCharactersIn(self.delimiter)
+        return lines[0].components(separatedBy: self.delimiter)
     }
     
     func parseRows(fromLines lines: [String]) -> [Dictionary<String, String>] {
@@ -50,7 +50,7 @@ open class CSV {
             }
             
             var row = Dictionary<String, String>()
-            let values = line.componentsSeparatedByCharactersIn(self.delimiter)
+            let values = line.components(separatedBy: self.delimiter)
             for (index, header) in self.headers.enumerated() {
                 if index < values.count {
                     row[header] = values[index]

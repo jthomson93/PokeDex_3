@@ -126,10 +126,10 @@ class Pokemon {
             print(self.weight)
             print(self.weight)
             
-          
+          completed()
         }
         
-        completed()
+        
     }
     
 

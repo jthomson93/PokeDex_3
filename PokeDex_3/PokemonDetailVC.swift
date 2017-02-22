@@ -30,7 +30,8 @@ class PokemonDetailVC: UIViewController {
         super.viewDidLoad()
         nameLabel.text = pokemon.name.capitalized
         
-        pokemon.downloadPokemonDetails {
+        pokemon.downloadPokemonDetails { () -> () in
+            
             print("Did arrive here")
             self.updateUI()
         }

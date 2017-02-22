@@ -21,6 +21,9 @@ class Pokemon {
     private var _weight: String!
     private var _attack: String!
     private var _nextEvoTxt: String!
+    private var _nextEvoName: String!
+    private var _nextEvoID: String!
+    private var _nextEvoLevel: String!
     private var _pokemonURL: String!
     
     
@@ -31,7 +34,28 @@ class Pokemon {
             _name = ""
         }
         return _name
+    }
+    
+    var nextEvoName: String {
+        if _nextEvoName == nil {
+            _nextEvoName = ""
         }
+        return _nextEvoName
+    }
+    
+    var nextEvoID: String {
+        if _nextEvoID == nil {
+            _nextEvoID = ""
+        }
+        return _nextEvoID
+    }
+    
+    var nextEvoLevel: String {
+        if _nextEvoLevel == nil {
+            _nextEvoLevel = ""
+        }
+        return _nextEvoLevel
+    }
     
     var pokedexID: Int {
         if _pokedexID == nil {
@@ -123,16 +147,84 @@ class Pokemon {
                 self._defense = "\(defense)"
             }
             
-            print(self.weight)
-            print(self.weight)
+            if let types = dict?["types"] as? [Dictionary<String, AnyObject>], types.count > 0 {
+                
+                if let name = types[0]["name"] {
+                    
+                    self._type = name.capitalized
+                }
+                
+                if types.count > 1 { // If there is more than one dictionary within the 'types' array this will add them to the text.
+                    
+                    for x in 1..<types.count {
+                        
+                        if let name =  types[x]["name"] {
+                            self._type! += "/\(name.capitalized!)"
+                        }
+                    }
+                }
+            }
             
-          completed()
+            if let descArr = dict?["descriptions"] as? [Dictionary <String, String>], descArr.count > 0 {
+                
+                if let url = descArr[0]["resource_uri"] {
+                    
+                    let descriptionURL = "\(URL_BASE)\(url)"
+                    
+                    Alamofire.request(descriptionURL).responseJSON { (response) in
+                        
+                        if let descDict = response.value as? Dictionary<String, AnyObject> {
+                            
+                            if let desApi = descDict["description"] as? String {
+                                
+                                self._description = desApi
+                                print(self.description)
+                                
+                            }
+                            
+                        }
+                        completed()
+                    }
+                }
+                
+            }
+            
+            if let evolutions = dict?["evolutions"] as? [Dictionary <String, AnyObject>], evolutions.count > 0 {
+                
+                if let nextEvo = evolutions[0]["to"] as? String {
+                    
+                    if nextEvo.range(of: "mega") == nil {
+                        
+                        self._nextEvoName = nextEvo
+                        
+                    } else {
+                        self._nextEvoID = ""
+                    }
+                }
+                
+                if let uri = evolutions[0]["resource_uri"] as? String {
+                    let newStr = uri.replacingOccurrences(of: "/api/v1/pokemon/", with: "")
+                    let nextEvolutionId = newStr.replacingOccurrences(of: "/", with: "")
+                    self._nextEvoID = nextEvolutionId
+                }
+                
+                if let lvlExists = evolutions[0]["level"] {
+                    if let lvl = lvlExists as? Int {
+                        self._nextEvoLevel = "\(lvl)"
+                    } else {
+                        self._nextEvoLevel = ""
+                    }
+                }
+            }
+            completed()
+            }
+        
+          
         }
         
-        
-    }
     
 
+        
 }
     
     

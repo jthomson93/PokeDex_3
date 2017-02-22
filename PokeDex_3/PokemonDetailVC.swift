@@ -11,6 +11,7 @@ import UIKit
 class PokemonDetailVC: UIViewController {
     
     var pokemon: Pokemon!
+    
 
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -46,6 +47,9 @@ class PokemonDetailVC: UIViewController {
         defenceLabel.text = pokemon.defense
         heightLabel.text = pokemon.height
         weightLabel.text = pokemon.weight
+        pokedexLabel.text = "\(pokemon.pokedexID)"
+        currentEvoImage.image = UIImage(named: "\(pokemon.pokedexID)")
+        mainImage.image = currentEvoImage.image
         
     }
 }

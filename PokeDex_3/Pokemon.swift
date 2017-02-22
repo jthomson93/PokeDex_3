@@ -23,6 +23,8 @@ class Pokemon {
     private var _nextEvoTxt: String!
     private var _pokemonURL: String!
     
+    
+    
 //Getter and Setter with nil protection
     var name: String {
         if _name == nil {
@@ -95,7 +97,7 @@ class Pokemon {
     }
     
     
-    func downloadPokemonDetails(completed: @escaping DownloadComplete) {
+    func downloadPokemonDetails(completed: @escaping  DownloadComplete) {
         
         Alamofire.request(_pokemonURL).responseJSON { (response) in
             
@@ -121,6 +123,10 @@ class Pokemon {
                 self._defense = "\(defense)"
             }
             
+            print(self.weight)
+            print(self.weight)
+            
+          
         }
         
         completed()
